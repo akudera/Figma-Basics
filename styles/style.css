@@ -155,6 +155,7 @@
 
 :root {
     --color-light: #FFFFFF;
+    --color-light-green: #558a26;
     --color-green: #426B1F;
     --color-dark: #000000;
 
@@ -168,4 +169,107 @@
 body {
     background-color: var(--color-light);
     font-family: var(--font-family-base)
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.header {
+  padding: 32px 96px 32px 96px;
+  line-height: 1.2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 48px;
+}
+
+.action-button {
+  display: flex;
+  font-size: 16px;
+  column-gap: 42px;
+}
+
+ul.action-button li a {
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: color var(--transition-duration)
+}
+
+.basket {
+  font-family: "Inter-semibold", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--color-light);
+  background-color: var(--color-green);
+  padding: 14px 23px;
+
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-duration);
+}
+
+.logo {
+  font-family: "Newsreader-medium";
+  font-size: 32px;
+  text-decoration: none;
+  height: 32px;
+  color: var(--color-green);
+
+  transition: color var(--transition-duration)
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ul.action-button li a:hover {
+    color: var(--color-green)
+  }
+
+  .basket:hover {
+    background-color: var(--color-light-green);
+  }
+
+  .logo:hover {
+    color: var(--color-light-green)
+  }
+}
+
+@media (max-width: 964px) {
+  .nav {
+    column-gap: 30px;
+  }
+
+  .button-container {
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+    column-gap: 10px;
+  }
+
+  .action-button {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 10px;
+    row-gap: 3px
+  }
+}
+
+@media (max-width: 806px) {
+  .header {
+    padding: 16px 48px 16px 48px;
+  }
 }

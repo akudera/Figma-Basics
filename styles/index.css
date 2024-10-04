@@ -1,69 +1,68 @@
-.header {
-    padding: 32px 96px 32px 96px;
+a {
+    text-decoration: none;
+}
+
+.header-button-main-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 434px;
+}
+
+.header-button-internal-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-header {
+    font-family: 'Newsreader-regular';
+    font-size: 64px;
+    font-weight: normal;
+    text-align: center;
+    width: 1020px;
+    height: 154px;
+    margin-left: 20px;
+    margin-right: 20px; 
     line-height: 1.2;
+    word-spacing: -4px;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.italic-family {
+    font-family: 'Newsreader-italic';
 }
 
-.button-container {
-    display: flex;
-    align-items: center;
-    column-gap: 48px;
-}
-
-.action-button {
-    display: flex;
-    font-size: 16px;
-    column-gap: 42px;
-}
-
-li a {
-    text-decoration: none;
-    color: var(--color-dark);
-}
-
-.basket {
-    font-family: "Inter-semibold", sans-serif;
-    font-size: 16px;
-    text-decoration: none;
+.main-shop {
+    padding: 19px 32px;
+    font-size: 20px;
     color: var(--color-light);
     background-color: var(--color-green);
-    padding: 14px 23px;
-
     border-radius: var(--border-radius);
+    margin-top: 40px;
+
+    transition: background-color var(--transition-duration)
 }
 
-.logo {
-    font-family: "Newsreader-medium";
-    font-size: 32px;
-    height: 32px;
-    color: var(--color-green);
+@media (hover: hover) and (pointer: fine) {
+    .main-shop:hover {
+        background-color: var(--color-light-green)
+    }
 }
 
-@media (max-width: 1024px) {
-    .nav {
-        column-gap: 30px;
+@media (max-width: 1048px) {
+    .content-header {
+        width: auto;
+        height: auto;
+        word-spacing: 0px
     }
-
 }
 
-@media (max-width: 964px) {
-    .header {
-        padding: 16px 48px 16px 48px;
+@media (max-width: 707px) {
+    .content-header {
+        font-size: 36px;
     }
 
-    .button-container {
-        justify-content: flex-end;
-        flex-wrap: wrap-reverse;
-        column-gap: 10px;
-    }
-
-    .action-button {
-        flex-wrap: wrap;
-        column-gap: 10px;
+    .main-shop {
+        padding: 13px 22px;
     }
 }
