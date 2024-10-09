@@ -1,9 +1,25 @@
 @font-face {
-    font-family: 'Inter-regular';
-    src: url('../assets/fonts/Inter/Inter24pt-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Inter-light';
+  src: url('../assets/fonts/Inter/Inter24pt-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-regular';
+  src: url('../assets/fonts/Inter/Inter24pt-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-medium';
+  src: url("../assets/fonts/Inter/Inter24pt-Medium.woff2") format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -105,6 +121,7 @@
  img {
    display: block;
    max-width: 100%;
+   height: auto;
  }
  
  /**
@@ -134,6 +151,7 @@
      (когда, например, нужно будет "прижать" футер к низу сайта)
     */
    min-height: 100%;
+   min-width: 300px;
    /**
      Унифицированный интерлиньяж
     */

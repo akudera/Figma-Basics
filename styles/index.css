@@ -6,7 +6,7 @@ a {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 434px;
+    height: 404px;
 }
 
 .main-header-internal-container {
@@ -41,6 +41,26 @@ a {
     transition: background-color var(--transition-duration)
 }
 
+.organically-food-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: 16px;
+    margin-block: 146px 122px;
+    margin-left: 96px
+}
+
+.healthy-food-description {
+    font-family: 'Inter-light', sans-serif;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.inter-medium {
+    font-family: 'Inter-medium', sans-serif;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .main-shop:hover {
         background-color: var(--color-light-green)
@@ -50,5 +70,12 @@ a {
 @media (max-width: 600px) {
     .main-shop {
         padding: 13px 22px;
+    }
+}
+
+@media (max-width: 864px) {
+    .organically-food-container {
+        flex-wrap: wrap;
+        margin-inline: 20px;
     }
 }
