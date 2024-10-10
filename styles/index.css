@@ -23,7 +23,6 @@ a {
     margin-left: 20px;
     margin-right: 20px; 
     line-height: 1.2;
-    word-spacing: -4px;
 }
 
 .italic-family {
@@ -31,11 +30,11 @@ a {
 }
 
 .main-shop {
-    padding: 19px 32px;
     font-size: clamp(14px, 1.97vw, 20px);
     color: var(--color-light);
     background-color: var(--color-green);
     border-radius: var(--border-radius);
+    padding: 19px 32px;
     margin-top: 40px;
 
     transition: background-color var(--transition-duration)
@@ -47,14 +46,44 @@ a {
     justify-content: center;
     column-gap: 60px;
     row-gap: 16px;
-    margin-block: 146px 122px;
-    margin-left: 96px
+    margin-block: 146px 140px;
+    padding-left: 96px;
 }
 
 .healthy-food-description {
     font-family: 'Inter-light', sans-serif;
     font-size: 14px;
     margin-top: 16px;
+    padding-right: 7px
+}
+
+.believe-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.faith-content {
+    position: relative;
+    width: 57.06%;
+    margin: 0;
+}
+
+.faith-header {
+    position: absolute;
+    left: -15em;
+    top: 0.3em;
+    font-family: "Inter-semibold", sans-serif;
+    font-size: 14px;
+}
+
+.faith {
+    font-size: 20px;
+}
+
+.faith span {
+    display: block;
+    margin-bottom: 1.2em;
 }
 
 .inter-medium {
@@ -67,15 +96,48 @@ a {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1064px) {
+    .faith-header {
+        left: -13em;
+    }
+}
+
+@media (max-width: 932px) {
+    .faith-header {
+        left: 0;
+        top: -5em;
+    }
+
+    .faith-content {
+        width: 80%;
+    }
+
+    .believe-container {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 700px) {
     .main-shop {
         padding: 13px 22px;
+    }
+    
+    .healthy-food-description {
+        font-size: clamp(12px, 1.79vw, 14px);
+    }
+
+    .faith-header {
+        font-size: clamp(10px, 2.33vw, 14px);
+    }
+
+    .faith {
+        font-size: clamp(12px, 3.33vw, 20px);
     }
 }
 
 @media (max-width: 864px) {
     .organically-food-container {
         flex-wrap: wrap;
-        margin-inline: 20px;
+        padding-inline: 20px;
     }
 }
