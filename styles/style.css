@@ -184,38 +184,37 @@ body {
   overflow: hidden !important;
 }
 
-.header {
+.nav-header {
   padding: 32px 96px 32px 96px;
   line-height: 1.2;
 }
 
-.nav {
+.header__nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.button-container {
+.nav__menu-button-container {
   display: inline-flex;
   align-items: center;
   column-gap: 48px;
 }
 
-.action-button {
+.menu-button__activity {
   display: flex;
   font-size: 16px;
   column-gap: 42px;
 }
 
-ul.action-button li a {
+ul.menu-button__activity li a {
   text-decoration: none;
   color: var(--color-dark);
   transition: color var(--transition-duration)
 }
 
-.basket {
+.menu-button__basket {
   font-family: "Inter-semibold", sans-serif;
-  font-size: 16px;
+  font-size: clamp(12px, 1.26vw, 16px);
   text-decoration: none;
   color: var(--color-light);
   background-color: var(--color-green);
@@ -236,11 +235,11 @@ ul.action-button li a {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  ul.action-button li a:hover {
+  ul.menu-button__activity li a:hover {
     color: var(--color-green)
   }
 
-  .basket:hover {
+  .menu-button__basket:hover {
     background-color: var(--color-light-green);
   }
 
@@ -250,17 +249,17 @@ ul.action-button li a {
 }
 
 @media (max-width: 964px) {
-  .nav {
+  .header__nav {
     column-gap: 30px;
   }
 
-  .button-container {
+  .nav__menu-button-container {
     justify-content: flex-end;
     flex-wrap: wrap-reverse;
     column-gap: 10px;
   }
 
-  .action-button {
+  .menu-button__activity {
     flex-wrap: wrap;
     justify-content: flex-end;
     column-gap: 10px;
@@ -269,7 +268,7 @@ ul.action-button li a {
 }
 
 @media (max-width: 806px) {
-  .header {
+  .nav-header {
     padding: 16px 48px 16px 48px;
   }
 }

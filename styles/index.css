@@ -2,26 +2,24 @@ a {
     text-decoration: none;
 }
 
-.header-button-main-container {
+.main-header-container {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 434px;
 }
 
-.header-button-internal-container {
+.main-header-internal-container {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
 }
 
-.content-header {
+.slogan {
     font-family: 'Newsreader-regular';
-    font-size: 64px;
+    font-size: clamp(36px, 6.27vw, 64px);
     font-weight: normal;
     text-align: center;
-    width: 1020px;
-    height: 154px;
     margin-left: 20px;
     margin-right: 20px; 
     line-height: 1.2;
@@ -34,7 +32,7 @@ a {
 
 .main-shop {
     padding: 19px 32px;
-    font-size: 20px;
+    font-size: clamp(14px, 1.97vw, 20px);
     color: var(--color-light);
     background-color: var(--color-green);
     border-radius: var(--border-radius);
@@ -49,19 +47,7 @@ a {
     }
 }
 
-@media (max-width: 1048px) {
-    .content-header {
-        width: auto;
-        height: auto;
-        word-spacing: 0px
-    }
-}
-
-@media (max-width: 707px) {
-    .content-header {
-        font-size: 36px;
-    }
-
+@media (max-width: 600px) {
     .main-shop {
         padding: 13px 22px;
     }
